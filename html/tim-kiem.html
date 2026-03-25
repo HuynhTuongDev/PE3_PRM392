@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Search News - The Digital Curator</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f5f6f7",
+                        "surface-variant": "#dadddf",
+                        "on-secondary-fixed-variant": "#4941aa",
+                        "error-dim": "#a70138",
+                        "primary-fixed-dim": "#7a8cf3",
+                        "primary": "#4052b6",
+                        "primary-container": "#8899ff",
+                        "on-surface-variant": "#595c5d",
+                        "secondary": "#544db6",
+                        "on-primary-container": "#00156e",
+                        "inverse-primary": "#8596ff",
+                        "secondary-container": "#d1ccff",
+                        "surface-container-highest": "#dadddf",
+                        "outline-variant": "#abadae",
+                        "error": "#b41340",
+                        "tertiary-dim": "#a1003f",
+                        "on-tertiary": "#ffeff0",
+                        "tertiary": "#b70049",
+                        "surface": "#f5f6f7",
+                        "surface-bright": "#f5f6f7",
+                        "error-container": "#f74b6d",
+                        "tertiary-fixed": "#ff8fa4",
+                        "on-primary-fixed-variant": "#001b86",
+                        "on-error": "#ffefef",
+                        "surface-dim": "#d1d5d7",
+                        "on-tertiary-fixed": "#390011",
+                        "on-primary": "#f3f1ff",
+                        "on-secondary-fixed": "#2c208c",
+                        "on-secondary": "#f5f1ff",
+                        "on-error-container": "#510017",
+                        "tertiary-container": "#ff8fa4",
+                        "tertiary-fixed-dim": "#ff7794",
+                        "primary-fixed": "#8899ff",
+                        "surface-container-high": "#e0e3e4",
+                        "inverse-on-surface": "#9b9d9e",
+                        "secondary-dim": "#4840a9",
+                        "on-tertiary-container": "#670025",
+                        "surface-container-low": "#eff1f2",
+                        "outline": "#757778",
+                        "surface-container": "#e6e8ea",
+                        "secondary-fixed-dim": "#c1bdff",
+                        "primary-dim": "#3346a9",
+                        "on-secondary-container": "#4037a0",
+                        "secondary-fixed": "#d1ccff",
+                        "surface-tint": "#4052b6",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary-fixed-variant": "#77002d",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#0c0f10",
+                        "on-surface": "#2c2f30",
+                        "on-background": "#2c2f30"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopAppBar Navigation -->
+    <header
+        class="fixed top-0 w-full z-50 bg-[#f5f6f7]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)]">
+        <div class="flex items-center justify-between px-6 h-16 w-full max-w-lg mx-auto">
+            <button
+                class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors scale-95 active:opacity-80 transition-transform">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </button>
+            <h1 class="font-headline font-bold text-lg tracking-tight text-primary">Top News Feed</h1>
+            <button
+                class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors scale-95 active:opacity-80 transition-transform">
+                <span class="material-symbols-outlined text-primary">account_circle</span>
+            </button>
+        </div>
+    </header>
+    <main class="pt-20 pb-24 px-6 max-w-lg mx-auto min-h-screen">
+        <!-- Search Section -->
+        <section class="mb-8">
+            <div class="relative group">
+                <div class="absolute inset-y-0 left-5 flex items-center pointer-events-none">
+                    <span
+                        class="material-symbols-outlined text-on-surface-variant group-focus-within:text-primary transition-colors">search</span>
+                </div>
+                <input
+                    class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-14 pr-6 text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary/20 transition-all font-medium text-lg"
+                    placeholder="Search for news..." type="text" />
+            </div>
+            <!-- Quick Chips / Categories -->
+            <div class="flex gap-3 mt-4 overflow-x-auto hide-scrollbar py-2">
+                <button
+                    class="flex-none px-5 py-2 rounded-full bg-primary text-on-primary font-semibold text-sm shadow-sm">All</button>
+                <button
+                    class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-variant transition-colors">Technology</button>
+                <button
+                    class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-variant transition-colors">Design</button>
+                <button
+                    class="flex-none px-5 py-2 rounded-full bg-surface-container-high text-on-surface-variant font-semibold text-sm hover:bg-surface-variant transition-colors">Science</button>
+            </div>
+        </section>
+        <!-- Search Results / Feed -->
+        <div class="space-y-6">
+            <p class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface-variant ml-1">Results
+            </p>
+            <!-- NewsCard 1 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] hover:shadow-[0_24px_24px_-4px_rgba(64,82,182,0.12)] hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+                <div class="aspect-[16/9] w-full overflow-hidden relative">
+                    <img alt="Tech device" class="w-full h-full object-cover"
+                        data-alt="Close up of modern minimalist tech gadget on a desk"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI8LJ5t78IuzvJl8dbqMNn8FrrBAqwhxjxLah0eIiGzojoxztFxPKOV5ZxpFBoJANmSqGWBD7FRgxF1Ir5vOiYXZhyV7V7nrF1WTHcFYDNnruW_fizkduN054h7HSAndUYfTdj7xi9m6sc3YaPpe30Ts-n05eHkwZaOw5c-xngAl_ss4LKvGKR4tl3TtlOPGGGU-aZAE7hxny8zrNm_7_u62uC8oqywYNMJdtOpMdrs2X0RfB1OtZLd7CW_CBr8p9rh9icg9KjvsgZ" />
+                    <div class="absolute top-4 right-4">
+                        <button
+                            class="w-10 h-10 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-tertiary transition-colors">
+                            <span class="material-symbols-outlined text-xl">favorite</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span
+                            class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider">Technology</span>
+                        <span class="text-on-surface-variant text-xs font-medium">4 mins read</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl leading-tight text-on-surface mb-3">The Future of
+                        Minimalist Interface Design in 2024</h3>
+                    <p class="text-on-surface-variant text-sm line-clamp-2 font-body">Exploring how tactile surfaces and
+                        soft minimalism are reshaping our digital daily interactions through subtle depth.</p>
+                </div>
+            </article>
+            <!-- NewsCard 2 (Asymmetric Variation) -->
+            <article
+                class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] hover:shadow-[0_24px_24px_-4px_rgba(64,82,182,0.12)] hover:scale-[1.02] transition-all duration-300 cursor-pointer flex items-center p-4">
+                <div class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden">
+                    <img alt="Global network" class="w-full h-full object-cover"
+                        data-alt="Abstract blue digital network connections glowing in dark space"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeqC3i7GULGKjkPttpO4aX2_bg6cN-6dchW2n5Br0-0v8OEhg8DGiRYRZg7RNhheLIoAkTefhfuK533SIW_YIwORAROTB4sr40XVGpIVgyrBgKf69x6_MAp76jeoyLhmVdsNkV525t8aZOYDmqSl4dRjy14v4bczfUvFS_7iEjJcvcHz8xN3TEcevUoSDmNz1t7jcd7SNmS4APm8wc0dWC9XQwfeN49w5fiAbZxfvy488UtAhfV0897eXcRijyF2dwG61iBgnsuog5" />
+                </div>
+                <div class="ml-4 flex-1">
+                    <span class="text-tertiary text-[10px] font-bold uppercase tracking-wider">Trending</span>
+                    <h3 class="font-headline font-bold text-md leading-tight text-on-surface mt-1">Quantum Computing
+                        Reaches New Milestone</h3>
+                    <p class="text-on-surface-variant text-xs mt-1">2 hours ago • Science Weekly</p>
+                </div>
+            </article>
+            <!-- NewsCard 3 -->
+            <article
+                class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] hover:shadow-[0_24px_24px_-4px_rgba(64,82,182,0.12)] hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+                <div class="aspect-[16/9] w-full overflow-hidden relative">
+                    <img alt="Mountain landscape" class="w-full h-full object-cover"
+                        data-alt="High quality aerial view of green mountain peaks under morning mist"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXE6NZojhZAGXmTrf-KBIarU_1JIXqJ5XyXtyZKVCdYEdx8oSMfpE-Yug2vCmdfJumDR9YZ5OTkNsrJXeH-1IEofwnSR20AOXTiK0CkD_eHqZY1lW8iHxIitVYrIFFkKeDnkpkOK_bBGcW0_gN0CpFXSonwd-ciGTHVXTYCwaCz5O9lNYbD-KcWXB85LCmhyFLCT0-X3hJXQgX9GV0UttsKUQd1R8pj4F4xUwvINWLjLhtNL2YNOO9HM_qH6K6OSLA42Cbz08VxI-n" />
+                    <div class="absolute top-4 right-4">
+                        <button
+                            class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container shadow-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-xl"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span
+                            class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider">Nature</span>
+                        <span class="text-on-surface-variant text-xs font-medium">8 mins read</span>
+                    </div>
+                    <h3 class="font-headline font-bold text-xl leading-tight text-on-surface mb-3">The Quiet Revolution
+                        of Eco-Sustainable Architecture</h3>
+                    <p class="text-on-surface-variant text-sm line-clamp-2 font-body">Architects are turning to
+                        biomimicry to create buildings that breathe and adapt to their surroundings naturally.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 h-20 px-8 flex justify-around items-center max-w-lg mx-auto pb-safe bg-[#f5f6f7]/80 dark:bg-slate-900/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_24px_-4px_rgba(64,82,182,0.06)]">
+        <!-- Home -->
+        <a class="flex items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:scale-110 transition-transform active:scale-90 duration-200 ease-out"
+            href="#">
+            <span class="material-symbols-outlined">home</span>
+        </a>
+        <!-- Search (ACTIVE) -->
+        <a class="flex items-center justify-center bg-[#4052b6]/10 dark:bg-[#4052b6]/30 text-[#4052b6] dark:text-white rounded-2xl p-3 w-12 h-12 hover:scale-110 transition-transform active:scale-90 duration-200 ease-out"
+            href="#">
+            <span class="material-symbols-outlined">search</span>
+        </a>
+        <!-- Favorites -->
+        <a class="flex items-center justify-center text-slate-400 dark:text-slate-500 p-3 hover:scale-110 transition-transform active:scale-90 duration-200 ease-out"
+            href="#">
+            <span class="material-symbols-outlined">favorite</span>
+        </a>
+    </nav>
+    <!-- Background Decoration for Editorial Feel -->
+    <div
+        class="fixed top-0 left-0 w-full h-full -z-10 bg-gradient-to-br from-surface to-surface-container-low pointer-events-none">
+    </div>
+</body>
+
+</html>

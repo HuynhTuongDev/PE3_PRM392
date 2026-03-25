@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Favorites ❤️</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f5f6f7",
+                        "surface-variant": "#dadddf",
+                        "on-secondary-fixed-variant": "#4941aa",
+                        "error-dim": "#a70138",
+                        "primary-fixed-dim": "#7a8cf3",
+                        "primary": "#4052b6",
+                        "primary-container": "#8899ff",
+                        "on-surface-variant": "#595c5d",
+                        "secondary": "#544db6",
+                        "on-primary-container": "#00156e",
+                        "inverse-primary": "#8596ff",
+                        "secondary-container": "#d1ccff",
+                        "surface-container-highest": "#dadddf",
+                        "outline-variant": "#abadae",
+                        "error": "#b41340",
+                        "tertiary-dim": "#a1003f",
+                        "on-tertiary": "#ffeff0",
+                        "tertiary": "#b70049",
+                        "surface": "#f5f6f7",
+                        "surface-bright": "#f5f6f7",
+                        "error-container": "#f74b6d",
+                        "tertiary-fixed": "#ff8fa4",
+                        "on-primary-fixed-variant": "#001b86",
+                        "on-error": "#ffefef",
+                        "surface-dim": "#d1d5d7",
+                        "on-tertiary-fixed": "#390011",
+                        "on-primary": "#f3f1ff",
+                        "on-secondary-fixed": "#2c208c",
+                        "on-secondary": "#f5f1ff",
+                        "on-error-container": "#510017",
+                        "tertiary-container": "#ff8fa4",
+                        "tertiary-fixed-dim": "#ff7794",
+                        "primary-fixed": "#8899ff",
+                        "surface-container-high": "#e0e3e4",
+                        "inverse-on-surface": "#9b9d9e",
+                        "secondary-dim": "#4840a9",
+                        "on-tertiary-container": "#670025",
+                        "surface-container-low": "#eff1f2",
+                        "outline": "#757778",
+                        "surface-container": "#e6e8ea",
+                        "secondary-fixed-dim": "#c1bdff",
+                        "primary-dim": "#3346a9",
+                        "on-secondary-container": "#4037a0",
+                        "secondary-fixed": "#d1ccff",
+                        "surface-tint": "#4052b6",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary-fixed-variant": "#77002d",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#0c0f10",
+                        "on-surface": "#2c2f30",
+                        "on-background": "#2c2f30"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: #f5f6f7;
+            font-family: 'Manrope', sans-serif;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f5f6f7]/80 backdrop-blur-xl shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)]">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-lg mx-auto">
+<button class="p-2 hover:bg-slate-100 transition-colors rounded-full active:opacity-80 transition-transform scale-95">
+<span class="material-symbols-outlined text-[#4052b6]">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#4052b6]">Your Favorites ❤️</h1>
+<button class="p-2 hover:bg-slate-100 transition-colors rounded-full active:opacity-80 transition-transform scale-95">
+<span class="material-symbols-outlined text-[#4052b6]">account_circle</span>
+</button>
+</div>
+</nav>
+<main class="max-w-lg mx-auto px-6 pt-24 space-y-6">
+<!-- Favorited Post Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] group hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start gap-4">
+<div class="space-y-3">
+<h2 class="font-headline font-bold text-lg leading-tight text-on-surface">The Future of Sustainable Architecture in 2024</h2>
+<p class="font-body text-sm text-on-surface-variant line-clamp-2">Exploring how vertical forests and modular timber are redefining our urban skylines.</p>
+</div>
+<button class="flex-shrink-0 bg-tertiary-container/20 p-2 rounded-full">
+<span class="material-symbols-outlined filled-icon text-tertiary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Abstract architectural concept sketch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4_C1E5xA-izDxklt4USjHwAKu1eXgZ77GK_dUgf9GSAhFA9PKBgUhF_TD_O1j4FJTGANfTzMqxNWiEzwXsA7qKeV8G-FckmiSk0Kr1PvJZ-V-S8hh3e6ZEjS6G9Jq0y8EzsBZDz4vBKOdK8WyWnUwe70iL7rXu35wmFTa-N4_LYFZZmQKl2DeYPO_SsjrNd6EECNHBj9GfwUK-0F887kAV4G-D9kbFwkHpZt0FAJgXaL2ABnFgPCJrYHe-8jO7vWTVRSXfPnUTYhT"/>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Design Monthly • 4 min read</span>
+</div>
+</article>
+<!-- Favorited Post Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] group hover:scale-[1.02] transition-transform duration-300">
+<div class="flex justify-between items-start gap-4">
+<div class="space-y-3">
+<h2 class="font-headline font-bold text-lg leading-tight text-on-surface">Quantum Computing: Breaking the Encryption Barrier</h2>
+<p class="font-body text-sm text-on-surface-variant line-clamp-2">Scientists achieve a new milestone in qubit stability, bringing us closer to a post-quantum world.</p>
+</div>
+<button class="flex-shrink-0 bg-tertiary-container/20 p-2 rounded-full">
+<span class="material-symbols-outlined filled-icon text-tertiary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="mt-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Cybernetic blue and indigo gradient background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD9GK-JjQA0yZ0CHkZeKNAjkMUE616lq9XS127ifmC6NWhoy9h-pMDqs_nIq53EP73r0ORJMWPRMHqWsKR-DTiRxpKi65uKAyDfU3pDsLfw_1jy1f0VWIZSYjZonft-AnttPk0_hh0vr5vVfo-NKFYGw-xYkobKycUXmgHiMu0aDRzhXLYHrl3Ud0o51ILRAtfLwQnonphQ2o02ZUploCVVaL-LA_sd0lr9MivR5h9LwPCYs0iOELsqiiZUMdiW5HevwPNRFaWTEO8"/>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Tech Radar • 8 min read</span>
+</div>
+</article>
+<!-- Section Spacer -->
+<div class="py-8 text-center">
+<div class="h-px bg-surface-container-high w-1/3 mx-auto"></div>
+</div>
+<!-- Empty State Preview -->
+<section class="flex flex-col items-center justify-center py-12 px-8 text-center">
+<div class="w-48 h-48 bg-surface-container-low rounded-full flex items-center justify-center mb-8 relative">
+<div class="absolute inset-0 bg-primary/5 rounded-full animate-pulse"></div>
+<span class="material-symbols-outlined text-surface-variant text-7xl">heart_broken</span>
+</div>
+<h3 class="font-headline font-bold text-2xl text-on-surface mb-2">No favorites yet</h3>
+<p class="font-body text-on-surface-variant max-w-xs leading-relaxed">
+                Tap the heart on any story to save it here for later reading. Your curated library is waiting.
+            </p>
+<button class="mt-8 px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-full shadow-lg active:scale-95 transition-transform">
+                Explore News
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 right-0 h-20 px-8 flex justify-around items-center max-w-lg mx-auto pb-safe bg-[#f5f6f7]/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-8px_24px_-4px_rgba(64,82,182,0.06)]">
+<div class="flex justify-around items-center w-full">
+<!-- Home -->
+<button class="flex items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">home</span>
+</button>
+<!-- Search -->
+<button class="flex items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">search</span>
+</button>
+<!-- Favorite (ACTIVE) -->
+<button class="flex items-center justify-center bg-[#4052b6]/10 text-[#4052b6] rounded-2xl p-3 w-12 h-12 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined filled-icon" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</footer>
+</body></html>

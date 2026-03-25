@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f5f6f7",
+                        "surface-variant": "#dadddf",
+                        "on-secondary-fixed-variant": "#4941aa",
+                        "error-dim": "#a70138",
+                        "primary-fixed-dim": "#7a8cf3",
+                        "primary": "#4052b6",
+                        "primary-container": "#8899ff",
+                        "on-surface-variant": "#595c5d",
+                        "secondary": "#544db6",
+                        "on-primary-container": "#00156e",
+                        "inverse-primary": "#8596ff",
+                        "secondary-container": "#d1ccff",
+                        "surface-container-highest": "#dadddf",
+                        "outline-variant": "#abadae",
+                        "error": "#b41340",
+                        "tertiary-dim": "#a1003f",
+                        "on-tertiary": "#ffeff0",
+                        "tertiary": "#b70049",
+                        "surface": "#f5f6f7",
+                        "surface-bright": "#f5f6f7",
+                        "error-container": "#f74b6d",
+                        "tertiary-fixed": "#ff8fa4",
+                        "on-primary-fixed-variant": "#001b86",
+                        "on-error": "#ffefef",
+                        "surface-dim": "#d1d5d7",
+                        "on-tertiary-fixed": "#390011",
+                        "on-primary": "#f3f1ff",
+                        "on-secondary-fixed": "#2c208c",
+                        "on-secondary": "#f5f1ff",
+                        "on-error-container": "#510017",
+                        "tertiary-container": "#ff8fa4",
+                        "tertiary-fixed-dim": "#ff7794",
+                        "primary-fixed": "#8899ff",
+                        "surface-container-high": "#e0e3e4",
+                        "inverse-on-surface": "#9b9d9e",
+                        "secondary-dim": "#4840a9",
+                        "on-tertiary-container": "#670025",
+                        "surface-container-low": "#eff1f2",
+                        "outline": "#757778",
+                        "surface-container": "#e6e8ea",
+                        "secondary-fixed-dim": "#c1bdff",
+                        "primary-dim": "#3346a9",
+                        "on-secondary-container": "#4037a0",
+                        "secondary-fixed": "#d1ccff",
+                        "surface-tint": "#4052b6",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary-fixed-variant": "#77002d",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#0c0f10",
+                        "on-surface": "#2c2f30",
+                        "on-background": "#2c2f30"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "3xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            font-family: 'Plus Jakarta Sans';
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c2f30;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+    <!-- Sticky Header (Custom) -->
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl h-16 flex items-center px-6 max-w-lg mx-auto shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)]">
+        <button aria-label="Back"
+            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+        </button>
+        <div class="flex-1 flex justify-center">
+            <span class="font-headline font-bold text-lg tracking-tight text-primary">Article Detail</span>
+        </div>
+        <button aria-label="Share"
+            class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+            <span class="material-symbols-outlined text-on-surface-variant" data-icon="ios_share">ios_share</span>
+        </button>
+    </header>
+    <main class="max-w-lg mx-auto pt-16 pb-32">
+        <!-- Feature Image Section -->
+        <div class="px-6 mt-6">
+            <div
+                class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.1)]">
+                <img alt="Feature news visual" class="w-full h-full object-cover"
+                    data-alt="High quality close up of modern architectural building"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpG1DHwL0-FV5H7HU8aue6Tr3bAk94YLlr0_qCa8JE8xy3eXaMJ65quI6kvv75_QIh4pGdoRNKN1di8t2kJ97bEFZL9Ipl78rYiK-I5wKjYSNLQHCXrI5TaXsK4bwa8SlSjBVuYU3ZSpPtal4QrIkmgJDwrc5iwPj2Of9_R-8PLVaGvzEqWKsI5QaiGSc96lbupPSgNMSYSZuVY0FsGdahx4oKgzfd3niD0yHQiS5CmKIrA-rt79XDk8Fv0U9hGQFXDMGcFR8KIv2H" />
+                <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent">
+                    <span
+                        class="px-3 py-1 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded-full">Innovation</span>
+                </div>
+            </div>
+        </div>
+        <!-- Headline Section -->
+        <div class="px-8 mt-10">
+            <h1 class="font-headline font-extrabold text-4xl leading-tight text-primary">
+                The Future of Urban Architecture in the Post-Digital Age
+            </h1>
+            <div class="flex items-center mt-6 gap-4">
+                <div class="w-12 h-12 rounded-2xl overflow-hidden ring-4 ring-white shadow-sm">
+                    <img alt="Author" class="w-full h-full object-cover"
+                        data-alt="Professional headshot of a smiling male journalist"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR4ImL0x4UTmU5ccIknOpYhTy8DOyjW6hJRhgP1c0Se315z1XUGnt-S3FJCTUzRRHj6qjNmNfDKYDqFKqFtWaz06XcqsE0yuOtL47IeQoXow3HivFZ6EKjIwCrlDgWUyici3Txqvy4mP4PMCFmuJMRkOd0XFw3mFal2h7i8VnVMqDnFtpUEy1I7s6ZJBdWbz5sZXrOFZTMudSk29uXrLJiwCEaVzk463v7t3kFc6bKUzkXyAzIUjqMj0h6yGUBXW3wATMNGHuYukAq" />
+                </div>
+                <div>
+                    <p class="font-headline font-bold text-on-surface">Julian Thorne</p>
+                    <p class="text-xs text-on-surface-variant font-medium">Senior Editor • 6 min read</p>
+                </div>
+            </div>
+        </div>
+        <!-- Article Content -->
+        <article class="px-8 mt-10 text-on-surface/90 article-content">
+            <p class="text-lg font-medium leading-relaxed italic border-l-4 border-primary/20 pl-4 mb-8">
+                As cities evolve, the intersection of physical space and digital connectivity is reshaping how we
+                perceive our environment.
+            </p>
+            <p>
+                The landscapes of our cities are undergoing a silent transformation. What once was defined by steel and
+                glass is now being redefined by data and human-centric design. Architects are no longer just building
+                structures; they are creating ecosystems that breathe with the rhythm of the city's inhabitants.
+            </p>
+            <h2>Redefining Public Spaces</h2>
+            <p>
+                In the last decade, we've seen a shift from static monuments to fluid social hubs. Technology, rather
+                than distancing us, is being used to foster serendipitous interactions. Soft minimalism has become the
+                guiding light for designers looking to reduce cognitive load in an increasingly noisy world.
+            </p>
+            <p>
+                "We are designing for the senses," says Maria Chen, lead architect at SkyLine Studio. "The tactile
+                quality of a wall, the way light filters through a canopy—these are the details that anchor us in
+                reality while our digital lives continue to expand."
+            </p>
+            <div class="my-10 p-6 bg-surface-container-low rounded-3xl">
+                <p class="text-sm font-headline font-bold text-primary mb-2 uppercase tracking-widest">Key Takeaway</p>
+                <p class="text-on-surface-variant italic mb-0">
+                    Successful architecture in 2024 focuses on environmental empathy and technological integration that
+                    remains invisible yet indispensable.
+                </p>
+            </div>
+            <p>
+                As we look toward the horizon, the challenge remains: how do we maintain the warmth of human connection
+                in a world increasingly mediated by screens? The answer lies in the curated experience of physical
+                space.
+            </p>
+        </article>
+        <!-- Metadata Footer -->
+        <div class="px-8 mt-12 mb-10 flex flex-wrap gap-2">
+            <span
+                class="px-4 py-2 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full hover:bg-primary-container/20 hover:text-primary transition-colors cursor-pointer">#Architecture</span>
+            <span
+                class="px-4 py-2 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full hover:bg-primary-container/20 hover:text-primary transition-colors cursor-pointer">#DesignSystem</span>
+            <span
+                class="px-4 py-2 bg-surface-container-high text-on-surface-variant text-xs font-semibold rounded-full hover:bg-primary-container/20 hover:text-primary transition-colors cursor-pointer">#UrbanLiving</span>
+        </div>
+    </main>
+    <!-- Floating Action Bar (Favorite) -->
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <button
+            class="group flex items-center gap-4 bg-primary text-on-primary px-8 py-4 rounded-full shadow-[0_24px_48px_-12px_rgba(64,82,182,0.4)] active:scale-95 transition-all duration-300">
+            <span class="material-symbols-outlined text-2xl group-hover:scale-125 transition-transform"
+                data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+            <span class="font-headline font-bold text-sm tracking-wide">Add to Favorites</span>
+        </button>
+    </div>
+    <!-- Background Gradient Blur Elements (Soft Minimalism Styling) -->
+    <div
+        class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <div
+        class="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-tertiary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+</body>
+
+</html>

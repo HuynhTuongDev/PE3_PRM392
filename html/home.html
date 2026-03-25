@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f5f6f7",
+                        "surface-variant": "#dadddf",
+                        "on-secondary-fixed-variant": "#4941aa",
+                        "error-dim": "#a70138",
+                        "primary-fixed-dim": "#7a8cf3",
+                        "primary": "#4052b6",
+                        "primary-container": "#8899ff",
+                        "on-surface-variant": "#595c5d",
+                        "secondary": "#544db6",
+                        "on-primary-container": "#00156e",
+                        "inverse-primary": "#8596ff",
+                        "secondary-container": "#d1ccff",
+                        "surface-container-highest": "#dadddf",
+                        "outline-variant": "#abadae",
+                        "error": "#b41340",
+                        "tertiary-dim": "#a1003f",
+                        "on-tertiary": "#ffeff0",
+                        "tertiary": "#b70049",
+                        "surface": "#f5f6f7",
+                        "surface-bright": "#f5f6f7",
+                        "error-container": "#f74b6d",
+                        "tertiary-fixed": "#ff8fa4",
+                        "on-primary-fixed-variant": "#001b86",
+                        "on-error": "#ffefef",
+                        "surface-dim": "#d1d5d7",
+                        "on-tertiary-fixed": "#390011",
+                        "on-primary": "#f3f1ff",
+                        "on-secondary-fixed": "#2c208c",
+                        "on-secondary": "#f5f1ff",
+                        "on-error-container": "#510017",
+                        "tertiary-container": "#ff8fa4",
+                        "tertiary-fixed-dim": "#ff7794",
+                        "primary-fixed": "#8899ff",
+                        "surface-container-high": "#e0e3e4",
+                        "inverse-on-surface": "#9b9d9e",
+                        "secondary-dim": "#4840a9",
+                        "on-tertiary-container": "#670025",
+                        "surface-container-low": "#eff1f2",
+                        "outline": "#757778",
+                        "surface-container": "#e6e8ea",
+                        "secondary-fixed-dim": "#c1bdff",
+                        "primary-dim": "#3346a9",
+                        "on-secondary-container": "#4037a0",
+                        "secondary-fixed": "#d1ccff",
+                        "surface-tint": "#4052b6",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary-fixed-variant": "#77002d",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#0c0f10",
+                        "on-surface": "#2c2f30",
+                        "on-background": "#2c2f30"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg, #eff1f2 25%, #e6e8ea 50%, #eff1f2 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-0 w-full z-50 bg-[#f5f6f7]/80 backdrop-blur-xl shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)]">
+        <div class="flex items-center justify-between px-6 h-16 w-full max-w-lg mx-auto">
+            <button
+                class="p-2 text-slate-500 hover:bg-slate-100 transition-colors rounded-full active:opacity-80 transition-transform scale-95">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+            <h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#4052b6]">Top News Feed</h1>
+            <button
+                class="p-2 text-slate-500 hover:bg-slate-100 transition-colors rounded-full active:opacity-80 transition-transform scale-95">
+                <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+            </button>
+        </div>
+    </header>
+    <main class="pt-20 pb-24 px-6 max-w-lg mx-auto space-y-8">
+        <!-- Welcome Section -->
+        <section class="mb-4">
+            <h2 class="font-headline font-extrabold text-3xl text-on-surface tracking-tight leading-tight">Curated for
+                your morning.</h2>
+            <p class="font-body text-on-surface-variant text-sm mt-2">Latest updates in Technology and Design.</p>
+        </section>
+        <!-- NewsCard 1 -->
+        <article
+            class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] transition-transform hover:scale-[1.02] duration-300">
+            <div class="h-48 w-full bg-surface-container relative">
+                <img alt="Retro computer and synthwave neon lighting" class="w-full h-full object-cover"
+                    data-alt="Retro computer and synthwave neon lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2UUTbG9N5SQcQIHhlBjNSLMBdIj8QH0R-ZL0RJpswRbe10K5jW2t2A2EHXw-rb7en6K9uLZTvJDdjz1k1wlWckPd6AITWS4YnGwiZTNKSU012nxsPApgZOYgtQLLi0tzxo_pl6RzPSr5bck9u4tkzJiYU-POskir71_Qa6niJm6JK_KmVBtLw7eaub-U7kpLQhMTui6P_zhmdgxYHxvnH4rrUgxCAmSJxtY_szKBpWVBnHEMwojDZKEr9QfHQL8k723ebkyr2xfEV" />
+                <div class="absolute top-4 left-4">
+                    <span
+                        class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest font-label">NEWS</span>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-on-surface-variant text-xs font-semibold">2 min read</span>
+                    <button class="text-tertiary">
+                        <span class="material-symbols-outlined filled-icon" data-icon="favorite"
+                            style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </button>
+                </div>
+                <h3 class="font-headline font-bold text-xl text-primary leading-snug mb-3 line-clamp-2">The Resurgence
+                    of Analog Hardware in a Digital Age</h3>
+                <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2">How physical
+                    controls and tactile feedback are making a comeback in modern music production and industrial design
+                    trends.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm" data-icon="thumb_up">thumb_up</span>
+                            <span class="text-xs font-bold">1.2k</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span>
+                            <span class="text-xs font-bold">48</span>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-primary text-on-primary px-5 py-2 rounded-full text-xs font-bold tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-transform">READ
+                        MORE</button>
+                </div>
+            </div>
+        </article>
+        <!-- Skeleton Card (Loading State) -->
+        <div
+            class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] opacity-60">
+            <div class="h-40 w-full shimmer"></div>
+            <div class="p-6 space-y-4">
+                <div class="h-4 w-20 shimmer rounded-full"></div>
+                <div class="space-y-2">
+                    <div class="h-6 w-full shimmer rounded-lg"></div>
+                    <div class="h-6 w-3/4 shimmer rounded-lg"></div>
+                </div>
+                <div class="flex justify-between items-center pt-2">
+                    <div class="h-4 w-24 shimmer rounded-full"></div>
+                    <div class="h-8 w-24 shimmer rounded-full"></div>
+                </div>
+            </div>
+        </div>
+        <!-- NewsCard 2 -->
+        <article
+            class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] transition-transform hover:scale-[1.02] duration-300">
+            <div class="h-48 w-full bg-surface-container relative">
+                <img alt="Satellite view of earth with blue data streams" class="w-full h-full object-cover"
+                    data-alt="Satellite view of earth with blue data streams"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkpWbmYIjQpRyHW6gSSsYlctfZJ0703SFogJFSa9YAiVjRvjqCuEnCLOu7YeVF8UCAi8T-Ibu_4uUfYfI247PpWiyMQT1H4mLnoMHoJpV3I36a9aAFH2fip6gCpkmUkAzxnzPmpfosdOV8uOc88dEP-p9OLZaPRdIOFL8oMd2Bj4lgLVsnYoKiIpzpb-sVwJ105ZmU95rQPpIrAzGIr4OCXzoc5Q-1NTyCMxG6fheXrHayUTCStkHeAdfzo63kNO8gBCykJydsD96" />
+                <div class="absolute top-4 left-4">
+                    <span
+                        class="bg-secondary-container/30 text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest font-label">NEWS</span>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-3">
+                    <span class="text-on-surface-variant text-xs font-semibold">5 min read</span>
+                    <button class="text-outline">
+                        <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                    </button>
+                </div>
+                <h3 class="font-headline font-bold text-xl text-primary leading-snug mb-3 line-clamp-2">Global Internet
+                    Infrastructure Faces New Frontiers</h3>
+                <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2">Satellite
+                    constellations are redefining what it means to be connected in remote areas of the world today.</p>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm" data-icon="thumb_up">thumb_up</span>
+                            <span class="text-xs font-bold">856</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm" data-icon="chat_bubble">chat_bubble</span>
+                            <span class="text-xs font-bold">12</span>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-primary text-on-primary px-5 py-2 rounded-full text-xs font-bold tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-transform">READ
+                        MORE</button>
+                </div>
+            </div>
+        </article>
+        <!-- NewsCard 3 (Text Focus Layout) -->
+        <article
+            class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_24px_24px_-4px_rgba(64,82,182,0.06)] transition-transform hover:scale-[1.02] duration-300">
+            <div class="flex justify-between items-center mb-4">
+                <span
+                    class="bg-tertiary-container/30 text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest font-label">NEWS</span>
+                <span class="text-on-surface-variant text-xs font-semibold">3 min read</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-primary leading-snug mb-3">Minimalist Architecture in Urban
+                Dwellings</h3>
+            <p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2">How modern designers
+                are maximizing small spaces using light, glass, and sustainable materials in dense cities.</p>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4 text-on-surface-variant">
+                    <div class="flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-sm" data-icon="thumb_up">thumb_up</span>
+                        <span class="text-xs font-bold">2.4k</span>
+                    </div>
+                    <button class="text-tertiary">
+                        <span class="material-symbols-outlined filled-icon" data-icon="favorite"
+                            style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    </button>
+                </div>
+                <button
+                    class="bg-primary text-on-primary px-5 py-2 rounded-full text-xs font-bold tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-transform">READ
+                    MORE</button>
+            </div>
+        </article>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 h-20 px-8 flex justify-around items-center max-w-lg mx-auto pb-safe bg-[#f5f6f7]/80 backdrop-blur-xl rounded-t-3xl shadow-[0_-8px_24px_-4px_rgba(64,82,182,0.06)] z-50">
+        <!-- Home (Active) -->
+        <div
+            class="flex items-center justify-center bg-[#4052b6]/10 dark:bg-[#4052b6]/30 text-[#4052b6] rounded-2xl p-3 w-12 h-12 hover:scale-110 transition-transform cursor-pointer">
+            <span class="material-symbols-outlined filled-icon" data-icon="home"
+                style="font-variation-settings: 'FILL' 1;">home</span>
+        </div>
+        <!-- Search -->
+        <div
+            class="flex items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform cursor-pointer">
+            <span class="material-symbols-outlined" data-icon="search">search</span>
+        </div>
+        <!-- Favorite -->
+        <div
+            class="flex items-center justify-center text-slate-400 p-3 hover:scale-110 transition-transform cursor-pointer">
+            <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+        </div>
+    </nav>
+</body>
+
+</html>
